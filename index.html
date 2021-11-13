@@ -1,0 +1,72 @@
+<!--Mod 12.4.3 Belly Button Demographics Panel-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Custom styles for this template -->
+  <link href="assets/css/app.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <image src="bacteria-get-rid-of-bacteria.gif" style="width:60%;height:30%;" ></image>
+        <h1>Belly Button Biodiversity Dashboard</h1>        
+        <p>The Human Microbiome Project found that individuals host thousands of bacterial types, different body sites having their own distinctive communities.The bacterial makeup for a given site on a body varies from person to person, not only in type, but also in abundance. In the below given dataset, will be exploring the bacteria found in the navel of different individuals.</p>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p>Displaying the top 10 bacterial species found in the sample of the individual registered under the selected ID</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        Displaying the frequency of washing the naval as per the information given by the individual registered under the selected ID</p>
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p>Displaying the different bacterial cultures alongwith the quantity of the cultures found in the sample of the individual registered under the selected ID</p>
+      </div>
+    </div>
+  <div class="col-md-12 jumbotron text-center">
+    <image src="webp-net-gifmaker-1_orig.gif" style="width:60%;height:30%;" ></image>
+  </div>
+  </div>
+    <footer>Ref : https://en.wikipedia.org/wiki/Human_microbiome </footer>
+    <footer>Ref : Individual data received separately on the basis of samples of bacteria received from the individuals as per the data file</footer>
+    <footer>Image Ref : https://tenor.com/search/bacteria-gifs </footer>
+    <footer>Image Ref : https://www.amoebasisters.com/gifs.html</footer>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
